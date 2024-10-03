@@ -2,6 +2,7 @@ import { projects } from '@/data/index'
 import React from 'react'
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from "react-icons/fa";
+import Image from '@/node_modules/next/image';
 
 const RecentProjects = () => {
   return (
@@ -14,7 +15,6 @@ const RecentProjects = () => {
                 id,
                 title,
                 des,
-                img,
                 iconLists,
                 link
             }) => (
@@ -25,9 +25,9 @@ const RecentProjects = () => {
                     >
                         <div className='relative flex items-center justify-center sm:w-96 w-[100vw] sm:h-[40vh] overflow-hidden h-[40vh] mb-10'>
                             <div className='relative w-full h-full overflow-hidden lg:rounded-xl bg-[#13162d]'>
-                                <img src="/logo.svg"  />
+                                <Image src="/logo.svg"  />
                             </div>
-                            <img src="{img}"  className="z-10 relative" />
+                            <Image src="{img}"  className="z-10 relative" />
                         </div>
                         <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'> 
                             {title}
